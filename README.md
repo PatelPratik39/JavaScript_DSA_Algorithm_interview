@@ -37,3 +37,6 @@
     let var2 = null;
     console.log(var2);  //assign null to var2 so it will be var2
     console.log(typeof var2);  /// null is Object so output will be "Object"
+
+3.  What will be logged here?
+    ```js
