@@ -40,7 +40,7 @@
 
 3.   Create a counter function which has increment and getValue functionality ?
     ```js
-        const createCounter = () => {
+    const createCounter = () => {
             let count = 0;
 
             return {
