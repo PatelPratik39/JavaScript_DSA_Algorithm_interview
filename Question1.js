@@ -2,27 +2,32 @@ const users = [
   {
     id: 1,
     name: "Lasan",
-    isActive: true
+    isActive: true,
+    age: 20
   },
   {
     id: 2,
     name: "Magan",
-    isActive: true
+    isActive: true,
+    age: 33
   },
   {
     id: 3,
     name: "Manjoo",
-    isActive: false
+    isActive: false,
+    age: 38
   },
   {
     id: 4,
     name: "Chucha",
-    isActive: true
+    isActive: true,
+    age: 21
   },
   {
     id: 5,
     name: "Lata",
-    isActive: false
+    isActive: false,
+    age: 60
   }
 ];
 
@@ -34,7 +39,8 @@ console.log(users);
 //  iterate over an array obeject where i want to get name attribute
 // using push method i can ger index of user.name
 
-const names = [];
+// const names = [];
+const names = users.sort((user1, user2) => user1.age < user2.age ? 1 : -1)
 for (let i = 0; i < users.length; i++) {
   if (users[i].isActive) names.push(users[i].name);
 }
