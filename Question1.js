@@ -39,8 +39,8 @@ console.log(users);
 //  iterate over an array obeject where i want to get name attribute
 // using push method i can ger index of user.name
 
-// const names = [];
-const names = users.sort((user1, user2) => user1.age < user2.age ? 1 : -1)
+const names = [];
+users.sort((user1, user2) => (user1.age < user2.age ? 1 : -1));
 for (let i = 0; i < users.length; i++) {
   if (users[i].isActive) names.push(users[i].name);
 }
@@ -62,3 +62,11 @@ console.log("Names 2: ", names1);
 
 const names3 = users.filter((user) => user.isActive).map((user) => user.name);
 console.log("Names 3 :", names3);
+
+// Chaing opration to get a user array who is active and i want to set all the user name in descending order
+const name4 = users
+  .sort((a, b) => (a < b ? 1 : -1)) //descending order
+  //.sort((a, b) => (a < b ? -1 : 1)) //Ascending order
+  .filter((user) => user.isActive)
+  .map((user) => user.name);
+console.log("Names 4 : ", name4);
