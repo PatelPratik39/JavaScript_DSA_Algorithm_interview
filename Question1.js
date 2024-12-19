@@ -36,21 +36,23 @@ console.log(users);
 
 const names = [];
 for (let i = 0; i < users.length; i++) {
-  names.push(users[i].name);
+  if (users[i].isActive) names.push(users[i].name);
 }
 console.log("Names 1: ", names);
 
 // Option 2
 const names1 = [];
 users.forEach((user) => {
-  names1.push(user.name);
+  if (user.isActive) {
+    names1.push(user.name);
+  }
 });
-console.log("Names 2: ", names);
+console.log("Names 2: ", names1);
 
 // Option 3  => Best Approch using map function
 //  Using map() we can get name attribute from users object array
-// but if i want to get a user is active then print name so i need to filter the users array Object based on isactive status 
+// but if i want to get a user is active then print name so i need to filter the users array Object based on isactive status
 // then use map method
 
-const names3 = users.filter(user => user.isActive).map((user) => user.name);
+const names3 = users.filter((user) => user.isActive).map((user) => user.name);
 console.log("Names 3 :", names3);
