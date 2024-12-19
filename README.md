@@ -3,46 +3,31 @@
 # JavaScipt Interview Question Answers
 
 1.  Q1: Write code to get an array of names from given array of users
-    ```
-         const users = [
-  {
-    id: 1,
-    name: "Lasan",
-    isActive: true,
-    age: 20
-  },
-  {
-    id: 2,
-    name: "Magan",
-    isActive: true,
-    age: 33
-  },
-  {
-    id: 3,
-    name: "Manjoo",
-    isActive: false,
-    age: 38
-  },
-  {
-    id: 4,
-    name: "Chucha",
-    isActive: true,
-    age: 21
-  },
-  {
-    id: 5,
-    name: "Lata",
-    isActive: false,
-    age: 60
-  }
-];
+    * Get Active User Names Sorted by Age in Descending Order
 
-         const names = users.sort((a,b) => a.age < b.age ? 1 : -1)
-                            .filter(user => user.isActive)
-                            .map((user) => user.name)
-        console.log("Names : ", names);
-    ```
+        This code snippet demonstrates how to:
+        1. Sort users by age in descending order.
+        2. Filter only active users (`isActive: true`).
+        3. Extract the names of the active users.
 
+        ```js
+        const users = [
+            { id: 1, name: "Lasan", isActive: true, age: 20 },
+            { id: 2, name: "Magan", isActive: true, age: 33 },
+            { id: 3, name: "Manjoo", isActive: false, age: 38 },
+            { id: 4, name: "Chucha", isActive: true, age: 21 },
+            { id: 5, name: "Lata", isActive: false, age: 60 },
+        ];
+
+        // Step 1: Sort by age in descending order, Step 2: Filter active users, Step 3: Map to names
+        const names = users
+            .sort((a, b) => (a.age < b.age ? 1 : -1)) // Sort descending by age
+            .filter(user => user.isActive)           // Filter only active users
+            .map(user => user.name);                 // Extract names
+
+        console.log("Names: ", names); // Output: ["Magan", "Chucha", "Lasan"]
+
+        
 2.  Difference between null and undefined Q1: What will be logged in this example?
 ```
 
