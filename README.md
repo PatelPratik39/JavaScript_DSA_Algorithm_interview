@@ -27,8 +27,13 @@
 
         console.log("Names: ", names); // Output: ["Magan", "Chucha", "Lasan"]
 
-        
-2.  Difference between null and undefined Q1: What will be logged in this example?
-```
 
-```
+2.  Difference between null and undefined Q1: What will be logged in this example?
+    ```js
+    let var1;
+    console.log(var1);  //Undefind
+    console.log(typeof(var1)); //undefined
+    
+    let var2 = null;
+    console.log(var2);  //assign null to var2 so it will be var2
+    console.log(typeof var2);  /// null is Object so output will be "Object"
