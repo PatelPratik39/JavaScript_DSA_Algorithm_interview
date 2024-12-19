@@ -39,29 +39,29 @@ console.log(users);
 //  iterate over an array obeject where i want to get name attribute
 // using push method i can ger index of user.name
 
-const names = [];
-users.sort((user1, user2) => (user1.age < user2.age ? 1 : -1));
-for (let i = 0; i < users.length; i++) {
-  if (users[i].isActive) names.push(users[i].name);
-}
-console.log("Names 1: ", names);
+// const names = [];
+// users.sort((user1, user2) => (user1.age < user2.age ? 1 : -1));
+// for (let i = 0; i < users.length; i++) {
+//   if (users[i].isActive) names.push(users[i].name);
+// }
+// console.log("Names 1: ", names);
 
 // Option 2
-const names1 = [];
-users.forEach((user) => {
-  if (user.isActive) {
-    names1.push(user.name);
-  }
-});
-console.log("Names 2: ", names1);
+// const names1 = [];
+// users.forEach((user) => {
+//   if (user.isActive) {
+//     names1.push(user.name);
+//   }
+// });
+// console.log("Names 2: ", names1);
 
 // Option 3  => Best Approch using map function
 //  Using map() we can get name attribute from users object array
 // but if i want to get a user is active then print name so i need to filter the users array Object based on isactive status
 // then use map method
 
-const names3 = users.filter((user) => user.isActive).map((user) => user.name);
-console.log("Names 3 :", names3);
+// const names3 = users.filter((user) => user.isActive).map((user) => user.name);
+// console.log("Names 3 :", names3);
 
 // Chaing opration to get a user array who is active and i want to set all the user name in descending order
 const name4 = users
