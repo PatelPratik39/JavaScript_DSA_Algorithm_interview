@@ -39,7 +39,9 @@
     console.log(typeof var2);  /// null is Object so output will be "Object"
 
 3.   Create a counter function which has increment and getValue functionality ?
+
     ```js
+
     const createCounter = () => {
             let count = 0;
 
